@@ -1,0 +1,11 @@
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\bin\Debug\net10.0\LabTrack.Core.deps.json
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\bin\Debug\net10.0\LabTrack.Core.dll
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\bin\Debug\net10.0\LabTrack.Core.pdb
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.AssemblyInfoInputs.cache
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.AssemblyInfo.cs
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.csproj.CoreCompileInputs.cache
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.dll
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\refint\LabTrack.Core.dll
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.pdb
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\ref\LabTrack.Core.dll

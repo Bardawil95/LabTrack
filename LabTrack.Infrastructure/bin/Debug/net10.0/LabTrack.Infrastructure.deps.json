@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "LabTrack.Infrastructure/1.0.0": {
+        "dependencies": {
+          "LabTrack.Core": "1.0.0"
+        },
+        "runtime": {
+          "LabTrack.Infrastructure.dll": {}
+        }
+      },
+      "LabTrack.Core/1.0.0": {
+        "runtime": {
+          "LabTrack.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LabTrack.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LabTrack.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

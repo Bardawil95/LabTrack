@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LabTrack.Core/LabTrack.Core.csproj" />
+  <Project Path="LabTrack.Infrastructure/LabTrack.Infrastructure.csproj" />
+  <Project Path="LabTrack.Web/LabTrack.Web.csproj" />
+</Solution>
