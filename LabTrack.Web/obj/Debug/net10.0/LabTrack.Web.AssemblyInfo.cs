@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabTrack.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8096bf25878126fbbdae8e4af2995eccb822105a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d50349a6cccb4cd7973fed8f3ccf9fe9577119f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabTrack.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabTrack.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

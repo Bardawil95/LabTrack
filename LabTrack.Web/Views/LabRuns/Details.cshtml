@@ -1,0 +1,136 @@
+﻿@model LabTrack.Core.Models.LabRun
+@using LabTrack.Core.Models
+
+@{
+    ViewData["Title"] = "Run Details";
+    var sensorLogs = ViewBag.SensorLogs as IEnumerable<SensorLog> ?? Enumerable.Empty<SensorLog>();
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>@Model.Name</h2>
+    <a asp-action="Index" class="btn btn-secondary">← Back</a>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <dl class="row">
+            <dt class="col-sm-4">Status</dt>
+            <dd class="col-sm-8">
+                <span class="badge 
+                    @(Model.Status == "Running" ? "bg-primary" : 
+                      Model.Status == "Completed" ? "bg-success" : 
+                      Model.Status == "Failed" ? "bg-danger" : "bg-secondary")">
+                    @Model.Status
+                </span>
+            </dd>
+            <dt class="col-sm-4">Description</dt>
+            <dd class="col-sm-8">@Model.Description</dd>
+            <dt class="col-sm-4">Created By</dt>
+            <dd class="col-sm-8">@Model.CreatedBy</dd>
+            <dt class="col-sm-4">Created At</dt>
+            <dd class="col-sm-8">@Model.CreatedAt.ToLocalTime().ToString("dd MMM yyyy HH:mm")</dd>
+            <dt class="col-sm-4">Started At</dt>
+            <dd class="col-sm-8">@(Model.StartedAt?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "-")</dd>
+            <dt class="col-sm-4">Completed At</dt>
+            <dd class="col-sm-8">@(Model.CompletedAt?.ToLocalTime().ToString("dd MMM yyyy HH:mm") ?? "-")</dd>
+        </dl>
+    </div>
+
+    <div class="col-md-4">
+        <h5>Update Status</h5>
+        <form asp-action="UpdateStatus" asp-route-id="@Model.Id" method="post">
+            <div class="mb-2">
+                <select name="status" class="form-select">
+                    <option value="Pending">Pending</option>
+                    <option value="Running">Running</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Failed">Failed</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<div id="sensorApp">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Sensor Logs</h4>
+        <button @@click="fetchLogs" class="btn btn-sm btn-outline-primary">↻ Refresh</button>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <form asp-action="AddSensorLog" method="post">
+                <input type="hidden" name="labRunId" value="@Model.Id" />
+                <div class="row g-2">
+                    <div class="col">
+                        <input type="text" name="sensorName" class="form-control" placeholder="Sensor name" />
+                    </div>
+                    <div class="col">
+                        <input type="number" step="0.01" name="value" class="form-control" placeholder="Value" />
+                    </div>
+                    <div class="col">
+                        <input type="text" name="unit" class="form-control" placeholder="Unit" />
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success">Log</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div v-if="loading" class="text-muted">Loading...</div>
+
+    <div v-else-if="logs.length === 0" class="text-muted">No sensor logs yet.</div>
+
+    <table v-else class="table table-sm">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Sensor</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="log in logs" :key="log.id">
+                <td>{{ formatTime(log.timestamp) }}</td>
+                <td>{{ log.sensorName }}</td>
+                <td>{{ log.value }}</td>
+                <td>{{ log.unit }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    logs: [],
+                    loading: true
+                }
+            },
+            mounted() {
+                this.fetchLogs();
+            },
+            methods: {
+                async fetchLogs() {
+                    this.loading = true;
+                    const response = await axios.get('/LabRuns/SensorLogsJson/@Model.Id');
+                    this.logs = response.data;
+                    this.loading = false;
+                },
+                formatTime(timestamp) {
+                    return new Date(timestamp).toLocaleTimeString();
+                }
+            }
+        }).mount('#sensorApp');
+    </script>
+}

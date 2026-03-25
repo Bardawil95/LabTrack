@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LabTrack.Core.Models.LabRun>
+
+@{
+    ViewData["Title"] = "Lab Runs";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Lab Runs</h2>
+    <a asp-action="Create" class="btn btn-primary">+ New Run</a>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Created By</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var run in Model)
+        {
+            <tr>
+                <td>@run.Name</td>
+                <td>
+                    <span class="badge 
+                        @(run.Status == "Running" ? "bg-primary" : 
+                          run.Status == "Completed" ? "bg-success" : 
+                          run.Status == "Failed" ? "bg-danger" : "bg-secondary")">
+                        @run.Status
+                    </span>
+                </td>
+                <td>@run.CreatedBy</td>
+                <td>@run.CreatedAt.ToLocalTime().ToString("dd MMM yyyy HH:mm")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@run.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@run.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@run.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

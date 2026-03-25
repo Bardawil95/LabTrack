@@ -1,0 +1,30 @@
+﻿@model LabTrack.Core.Models.LabRun
+
+@{
+    ViewData["Title"] = "Delete Lab Run";
+}
+
+<h2>Delete Lab Run</h2>
+
+<div class="alert alert-danger">
+    Are you sure you want to delete <strong>@Model.Name</strong>?
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <dl class="row">
+            <dt class="col-sm-4">Name</dt>
+            <dd class="col-sm-8">@Model.Name</dd>
+            <dt class="col-sm-4">Status</dt>
+            <dd class="col-sm-8">@Model.Status</dd>
+            <dt class="col-sm-4">Created By</dt>
+            <dd class="col-sm-8">@Model.CreatedBy</dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
