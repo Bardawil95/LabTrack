@@ -8,8 +8,11 @@ C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\L
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.AssemblyInfo.cs
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.sourcelink.json
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.32795A5A.Up2Date
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.dll
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\refint\LabTrack.Infrastructure.dll
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.pdb
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\ref\LabTrack.Infrastructure.dll
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\bin\Debug\net10.0\LabTrack.Infrastructure.runtimeconfig.json
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Infrastructure\obj\Debug\net10.0\LabTrack.Infrastructure.genruntimeconfig.cache

@@ -9,3 +9,5 @@ C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Co
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\refint\LabTrack.Core.dll
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.pdb
 C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\ref\LabTrack.Core.dll
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.sourcelink.json
+C:\Users\Bardawil\Documents\LabTrack\LabTrack.Core\obj\Debug\net10.0\LabTrack.Core.csproj.AssemblyReference.cache
